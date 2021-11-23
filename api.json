@@ -1,0 +1,37 @@
+[
+    {
+        "nombre" : "HyperX pulsefire",
+        "precio" : "5999",
+        "id" : "1",
+        "url" : "https://i.ibb.co/yyZmcgQ/hyperx-pulsefire.jpg"
+    },
+
+    {
+        "nombre" : "Logitech g733",
+        "precio" : "13999",
+        "id" : "2",
+        "url" : "https://i.ibb.co/wwpwGqz/logitech-g733.jpg"
+    },
+
+    {
+        "nombre" : "Ryzen 7 3700x",
+        "precio" : "44999",
+        "id" : "3",
+        "url" : "https://i.ibb.co/fnsZ3HY/ryzen7-3700x.jpg"
+    },
+
+    {
+        "nombre" : "Razer Kraken",
+        "precio" : "11999",
+        "id" : "4",
+        "url" : "https://i.ibb.co/W6mgjD4/razer-kraken.png"
+    },
+
+    {
+        "nombre" : "Astros A10",
+        "precio" : "8999",
+        "id" : "5",
+        "url" : "https://i.ibb.co/2c0212x/a10.jpg"
+    }
+
+]
