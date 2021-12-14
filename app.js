@@ -15,14 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-cards.addEventListener('click', e => {
-    addCarrito(e)
-})
-
 items.addEventListener("click", e => {
   btnAccion(e)
 })
 
+cards.addEventListener('click', e => {
+    addCarrito(e)
+})
+
+//LLAMADA ASYNC
 const fetchData = async () => {
   try {
     const res = await fetch("api.json");
@@ -65,6 +66,7 @@ const setCarrito = objeto => {
         precio: objeto.querySelector('p').textContent,
         cantidad: 1
     }
+
 
     if(carrito.hasOwnProperty(producto.id)) {
         producto.cantidad = carrito[producto.id].cantidad + 1
@@ -138,3 +140,17 @@ const btnAccion = e => {
   
   e.stopPropagation()
 }
+
+const scrollUp = document.querySelector('.imagenScroll')
+
+$('.imagenScroll').click(function(){
+
+  $('html, body').animate({scrollTop: 0}, "slow")
+
+})
+
+
+$('#night-mode').click(() => {
+    $(".sectionPrincipal").toggleClass('.bodyNight')
+})
+

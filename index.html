@@ -3,81 +3,223 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GameZone</title>
+    <title>PuntoPhone</title>
+
+
+    <!-- css  -->
+    <link rel="stylesheet" href="index.css">
+    <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+    <!-- jquery  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <div class="container">
-        <h4>Carrito de compras</h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Item</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Acción</th>
-                    <th scope="col">Total</th>
-                </tr>
-            </thead>
-            <tbody id="items"></tbody>
-            <tfoot>
-                <tr id="footer">
-                    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-                </tr>
-            </tfoot>
-        </table>
-        <h4></h4>
-        <div class="row container" id="cards"></div>
-    </div>
 
-    <template id="template-footer">
-        <th scope="row" colspan="2">Total productos</th>
-        <td>10</td>
-        <td>
-            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
-                vaciar todo
-            </button>
-        </td>
-        <td class="font-weight-bold">$ <span>5000</span></td>
-    </template>
-
-    <template id="template-carrito">
-        <tr>
-            <th scope="row">id</th>
-            <td>Café</td>
-            <td>1</td>
-            <td>
-                <button class="btn btn-info btn-sm sumarCantidad">
-                    +
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">PuntoPhone</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                <button class="btn btn-danger btn-sm restarCantidad">
-                    -
-                </button>
-            </td>
-            <td>$ <span>500</span></td>
-        </tr>
-    </template>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#novedadesText">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#novedadesText">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#productosCards">Productos</a>
+                        </li>
+                        <li>
 
-    <div class="d-flex flex-row justify-content-evenly">
-        <template id="template-card">
-            <div class="col-12 mb-2">
-                <div class="card w-75">
-                    <img src="" alt="" class="card-img-top w-25">
-                    <div class="card-body">
-                        <h5>Titulo</h5>
-                        <p>precio</p>
-                        <button class="btn btn-dark boton-compra">Comprar</button>
+                            
+                            </div>
+                                <div class="compraContainer">
+
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        Iniciar Sesion
+                                      </button>
+                                        <img src="https://i.ibb.co/TT9fZ7G/carrito.png" alt="" class="mx-2">
+                                </div>
+                        </li>
+                    </ul>
+            </div>
+        </nav>
+
+
+    <section class="sectionPrincipal">
+
+
+        <!-- MODAL  -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">PuntoPhone</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                </div>
+                <div class="modal-body">
+                    <form id="registration_form">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="form_fname" aria-describedby="emailHelp">
+                            <span class="error_form" id="fname_error_message"></span>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="form_surname" aria-describedby="emailHelp">
+                            <span class="error_form" id="fsurname_error_message"></span>
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
+                          <input type="email" class="form-control" id="form_email" aria-describedby="emailHelp">
+                          <span class="error_form" id="email_error_message"></span>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="form_password">
+                          <span class="error_form" id="password_error_message"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirmar contraseña</label>
+                            <input type="password" class="form-control" id="form_retype_password">
+                            <span class="error_form" id="retype_password_error_message"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary my-5" value="Register">Registrarte</button>
+                      </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- MODAL  -->
+
+
+    <section>
+        <div class="imagenMainContainer">
+            <div class="novedadesText" id="novedadesText">
+                <h2>Welcome to PuntoPhone</h2>
+            </div>
+            <img src="https://i.ibb.co/0jYGRC3/iphone13-Max-Main.jpg" alt="" class="imagen-main">
+        </div>
+        <div>
+            <img src="https://i.ibb.co/4JbCqhK/iphone13-Main.jpg" alt="" class="imagenMainApple">
+        </div>
+        <div>
+            <img src="https://i.ibb.co/QQ3KXYH/Galaxy-Z-Fold3-3-1000x600.jpg" alt="" class="imagenMainApple">
+        </div>
+    </section>
+
+
+    <section class="container my-5 sectionMarcas owl-carousel">
+        <div class="marcasContainer">
+            <a href="#cards" class="category_item samsung"><img src="https://i.ibb.co/jwkZyQZ/samsung.png" alt="" class="marcasContainerIMG"></a>  
+        </div>
+        <div class="marcasContainer">
+            <a href="#cards" class="category_item apple"><img src="https://i.ibb.co/xmwH61B/manzana.png" alt="" class="marcasContainerIMG"></a>  
+        </div>
+        <div class="marcasContainer">
+           <a href="#cards" class="category_item motorola"><img src="https://i.ibb.co/gZCzCVQ/motorola.png" alt="" class="marcasContainerIMG"></a> 
+        </div>
+        <div class="marcasContainer">
+           <a href="#cards" class="category_item xiaomi"><img src="https://i.ibb.co/64TZk2B/xiaomi.png" alt="" class="marcasContainerIMG"></a> 
+        </div>
+    </section>
+
+    <div class="container" id="productosCards">
+        <div class="d-flex flex-row justify-content-evenly">
+            <template id="template-card">
+                <div class="col-12 mx-5">
+                    <div class="card w-100">
+                        <div class="cardContainer">
+                            <img src="" alt="" class="card-img-top w-25">
+                            <div class="card-body ">
+
+                                <h5>Titulo</h5>
+                                <p>precio</p>
+                                <button class="btn btn-dark boton-compra">Comprar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </template>
+
+            <div class="row container mx-auto" id="cards"></div>
+
+        </div>
+
+        <div class="container">
+            <h4>Carrito</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Acción</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="items"></tbody>
+                <tfoot>
+                    <tr id="footer">
+                        <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <h4></h4>
+        </div>
+
+        <template id="template-footer">
+            <th scope="row" colspan="2">Total productos</th>
+            <td>10</td>
+            <td>
+                <button class="btn btn-outline-danger btn-sm" id="vaciar-carrito">
+                    Vaciar Carrito
+                </button>
+            </td>
+            <td class="font-weight-bold">$ <span>5000</span></td>
         </template>
 
-
+        <template id="template-carrito">
+            <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td>
+                    <button class="btn btn-info btn-sm sumarCantidad">
+                        +
+                    </button>
+                    <button class="btn btn-danger btn-sm restarCantidad">
+                        -
+                    </button>
+                </td>
+                <td>$ <span></span></td>
+            </tr>
+        </template>
     </div>
 
+
+
+    <div class="row container mx-auto" id="cards"></div>
+
+    <img src="imagenes/up-arrow.png" alt="" class="imagenScroll">
+
+</section>
     <script src="app.js"></script>
+    <script src="jq.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
     </script>

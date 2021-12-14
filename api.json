@@ -1,37 +1,130 @@
 [
     {
-        "nombre" : "HyperX pulsefire",
-        "precio" : "5999",
+        "nombre" : "Iphone 11 64 GB",
+        "precio" : "750",
         "id" : "1",
-        "url" : "https://i.ibb.co/yyZmcgQ/hyperx-pulsefire.jpg"
+        "url" : "https://i.ibb.co/nmxq3td/iphone11.jpg",
+        "marca" : "iphone"
     },
 
     {
-        "nombre" : "Logitech g733",
-        "precio" : "13999",
+        "nombre" : "Iphone 13 128GB",
+        "precio" : "1200",
         "id" : "2",
-        "url" : "https://i.ibb.co/wwpwGqz/logitech-g733.jpg"
+        "url" : "https://i.ibb.co/Mk2pWWW/iphone13.png",
+        "marca" : "iphone"
     },
 
     {
-        "nombre" : "Ryzen 7 3700x",
-        "precio" : "44999",
+        "nombre" : "Iphone 11 pro max 256GB",
+        "precio" : "1050",
         "id" : "3",
-        "url" : "https://i.ibb.co/fnsZ3HY/ryzen7-3700x.jpg"
+        "url" : "https://i.ibb.co/ZBNqPFC/iphone11promax2.jpg",
+        "marca" : "iphone"
     },
 
     {
-        "nombre" : "Razer Kraken",
-        "precio" : "11999",
+        "nombre" : "Iphone 11 pro 64GB",
+        "precio" : "900",
         "id" : "4",
-        "url" : "https://i.ibb.co/W6mgjD4/razer-kraken.png"
+        "url" : "https://i.ibb.co/PY0N7dB/iphone11pro.jpg",
+        "marca" : "iphone"
     },
 
     {
-        "nombre" : "Astros A10",
-        "precio" : "8999",
+        "nombre" : "Samsung galaxy fold 3",
+        "precio" : "1800",
         "id" : "5",
-        "url" : "https://i.ibb.co/2c0212x/a10.jpg"
+        "url" : "https://i.ibb.co/DKsFbLr/galaxy-z-fold3.png",
+        "marca" : "samsung"
+    },
+
+    {
+        "nombre": "Samsung A72",
+        "precio": "380",
+        "id": "6",
+        "url": "https://i.ibb.co/X7kRxNR/A72.jpg",
+        "marca" : "samsung"
+    },
+
+    {
+        "nombre": "Samsung A52",
+        "precio": "320",
+        "id": "7",
+        "url": "https://i.ibb.co/MpmpGsx/A52.jpg",
+        "marca" : "samsung"
+    },
+
+    {
+        "nombre": "Xiaomi Mi 11 lite",
+        "precio": "490",
+        "id": "8",
+        "url": "https://i.ibb.co/z2nrcwB/xiaomi-Mi11-Lite.png",
+        "marca" : "xiaomi"
+    },
+
+    {
+        "nombre": "Samsung galaxy S20 FE",
+        "precio": "470",
+        "id": "9",
+        "url": "https://i.ibb.co/Prsy414/s20FE.png",
+        "marca" : "samsung"
+    },
+
+    {
+        "nombre": "Xiaomi redmi note 10 pro",
+        "precio": "350",
+        "id": "10",
+        "url": "https://i.ibb.co/1rKY5kX/redmi-Note10-Pro.jpg",
+        "marca" : "xiaomi"
+    },
+
+    {
+        "nombre": "Xiaomi Poco x3 Pro",
+        "precio": "370",
+        "id": "11",
+        "url": "https://i.ibb.co/NT3vSMn/poco-X3-Pro.jpg",
+        "marca" : "xiaomi"
+    },
+
+    {
+        "nombre": "Motorola Edge 20 Pro",
+        "precio": "750",
+        "id": "12",
+        "url": "https://i.ibb.co/WkmmbK7/moto-Edge20-Pro.png",
+        "marca" : "motorola"
+    },
+
+    {
+        "nombre": "Macbook Pro 2021",
+        "precio": "2100",
+        "id": "13",
+        "url": "https://i.ibb.co/4dhwbYJ/macbook.jpg",
+        "marca" : "Iphone"
+    },
+
+    {
+        "nombre": "Iphone X 64GB",
+        "precio": "520",
+        "id": "14",
+        "url": "https://i.ibb.co/kBfnL70/iphonexgrey.png",
+        "marca" : "Iphone"
+    },
+
+    {
+        "nombre": "Iphone SE 2020 64GB",
+        "precio": "500",
+        "id": "15",
+        "url": "https://i.ibb.co/nc3kxpy/i-Phone-SE-2020-black-back.png",
+        "marca" : "Iphone"
+    },
+
+    {
+        "nombre": "Samsung Galaxy S21 ULTRA",
+        "precio": "990",
+        "id": "16",
+        "url": "https://i.ibb.co/W5LFLX0/galaxy-S21-Ultra.jpg",
+        "marca" : "samsung"
     }
 
 ]

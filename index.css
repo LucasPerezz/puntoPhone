@@ -1,0 +1,74 @@
+.imagen-main{
+    width: 60%;
+}
+
+.imagenMainApple{
+    width: 100%;
+}
+
+.novedadesText{
+    margin: auto;
+}
+
+.imagenMainContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.marcasContainer{
+    width: 40%;
+}
+
+.marcasContainerIMG{
+    width: 30%;
+}
+
+.sectionMarcas{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cardItemPrice{
+    display: flex;
+}
+
+.imagenCarrito{
+    width: 100%;
+}
+
+.buttonCarrito{
+    width: 10%;
+}
+
+.imagenScroll{
+    width: 3%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+.compraContainer{
+    display: inline;
+    width: 10%;
+}
+
+.compraContainer img{
+    width: 15%;
+}
+
+
+.bodyLight{
+    background-color: white;
+}
+
+.bodyNight{
+    background-color: rgb(31, 31, 31);
+}
