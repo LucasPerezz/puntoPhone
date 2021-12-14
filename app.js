@@ -150,7 +150,4 @@ $('.imagenScroll').click(function(){
 })
 
 
-$('#night-mode').click(() => {
-    $(".sectionPrincipal").toggleClass('.bodyNight')
-})
 
